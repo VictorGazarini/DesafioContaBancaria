@@ -6,7 +6,7 @@ public class Main {
         System.out.println("Bem vindo ao login da sua conta bancaria!");
 
         System.out.println("Digite seu nome completo: ");
-        String nome = scanner.nextLine();
+        String name = scanner.nextLine();
 
         System.out.println("Escreva sua senha: ");
         String senha = scanner.nextLine();
@@ -14,5 +14,14 @@ public class Main {
         String resultado = SenhaValidacao.validarSenha(senha);
 
         System.out.println(resultado);
+
+        if (resultado.equals("Senha válida!")) {
+            System.out.println("Bem-vindo " + name + " ao nosso banco!");
+        } else {
+            System.out.println("Tente novamente");
+        }
+
+
+        scanner.close();
     }
 }
